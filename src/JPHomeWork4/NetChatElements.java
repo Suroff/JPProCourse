@@ -56,7 +56,9 @@ public class NetChatElements extends JFrame {
         aMap.put(enter, new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                chatWindow.setText(enterWindow.getText());
+                if (!enterWindow.getText().isEmpty()) {
+                    chatWindow.setText(enterWindow.getText());
+                }
             }
         });
 
